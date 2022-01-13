@@ -17,6 +17,12 @@ app.get('/hello_there', (req, res) => {
     res.status(200).json({ message: 'General Kenobi'})
 })
 
+app.get('/', (req, res) => {
+    res.send(`
+        <h1>Web 49 Rocks!</h1>
+    `)
+})
+
 const port = process.env.PORT || 9000
 
 app.listen(port, () => {
